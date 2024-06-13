@@ -37,7 +37,8 @@ def create_configuration(config: schemas.CountryConfigurationCreate, db: Session
     db_config = models.CountryConfiguration(
         country_code=config.country_code,
         business_name=config.business_name,
-        registration_number=config.registration_number
+        registration_number=config.registration_number,
+        additional_details=config.additional_details  # Ensure this field is included
     )
     db.add(db_config)
     db.commit()

@@ -19,4 +19,5 @@ class CountryConfiguration(Base):
     country_code = Column(String, unique=True, index=True, nullable=False)
     business_name = Column(String, nullable=False)
     registration_number = Column(String, nullable=True)
+    additional_details = Column(String, nullable=True)
     # Add other necessary fields

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import Optional
 class CountryConfigurationBase(BaseModel):
     """
     Pydantic schema representing the base fields of a country configuration.
@@ -13,7 +13,7 @@ class CountryConfigurationBase(BaseModel):
     country_code: str
     business_name: str
     registration_number: str = None
-    additional_details: str = None
+    additional_details: Optional[str] = None
 
 class CountryConfigurationCreate(CountryConfigurationBase):
     """
