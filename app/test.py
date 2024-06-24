@@ -25,12 +25,12 @@ def delete_configuration(country_code):
 # Example usage:
 if __name__ == '__main__':
     # Example: Create configuration
-    # create_response = create_configuration("JPN", {
-    #     'country_code': 'JPN',
-    #     'business_name': 'Example Inc.',
-    #     'registration_number': '12345',
-    #     'additional_details': 'Additional details about Example Inc.'
-    # })
+    create_response = create_configuration("JPN", {
+        'country_code': 'JPN',
+        'business_id': 'Example Inc.',
+        'registration_number': 'country govt ID number',
+        'additional_details': 'Additional details about Example Inc.'
+    })
 
     # Example: Get configuration
     get_response = get_configuration("JPN")
@@ -38,8 +38,8 @@ if __name__ == '__main__':
     # Example: Update configuration
     update_response = update_configuration("JPN", {
         'country_code': 'JPN',
-        'business_name': 'Updated Updated Business',
-        'registration_number': '654321',
+        'business_id': 'Green Card Number',
+        'registration_number': 'Japan Government ID',
         'additional_details': 'Updated additional details'
     })
 

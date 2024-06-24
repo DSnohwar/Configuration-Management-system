@@ -6,12 +6,12 @@ class CountryConfigurationBase(BaseModel):
 
     Attributes:
     - country_code (str): Country code of the country configuration.
-    - business_name (str): Business name associated with the country configuration.
+    - business_id (str): Business id associated with the country configuration.
     - registration_number (str, optional): Registration number related to the country configuration.
     - additional_details (str, optional): Additional details specific to the country configuration.
     """
     country_code: str
-    business_name: str
+    business_id: str
     registration_number: str = None
     additional_details: Optional[str] = None
 

@@ -36,7 +36,7 @@ def create_configuration(config: schemas.CountryConfigurationCreate, db: Session
     """
     db_config = models.CountryConfiguration(
         country_code=config.country_code,
-        business_name=config.business_name,
+        business_id=config.business_id,
         registration_number=config.registration_number,
         additional_details=config.additional_details  # Ensure this field is included
     )
@@ -84,8 +84,9 @@ def update_configuration(config: schemas.CountryConfigurationUpdate, db: Session
     db_config = db.query(models.CountryConfiguration).filter(models.CountryConfiguration.country_code == config.country_code).first()
     if db_config:
         # Update fields based on the provided schema
-        db_config.business_name = config.business_name
+        db_config.business_id = config.business_id
         db_config.registration_number = config.registration_number
+        db_config.additional_details = config.additional_details  # Ensure this field is included
         db.commit()
         db.refresh(db_config)
         
